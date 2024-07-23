@@ -1,0 +1,29 @@
+<ng-template #successTpl> Task added. </ng-template>
+
+<ng-template #successUpdated> Task updated. </ng-template>
+
+<div class="input-group mb-3 mx-2">
+  <input
+    type="text"
+    class="form-control"
+    [(ngModel)]="newTask"
+    placeholder="Add a task"
+  />
+  <button
+    class="btn btn-primary"
+    [disabled]="newTask.length === 0"
+    type="button"
+    (click)="addTask(successTpl)"
+  >
+    Add
+  </button>
+</div>
+
+<ul>
+  <app-todo-item
+    *ngFor="let todo of todos"
+    [todo]="todo"
+    (newItemEvent)="notifyUser(successUpdated)"
+  >
+  </app-todo-item>
+</ul>
