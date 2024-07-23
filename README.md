@@ -1,7 +1,8 @@
+# Angular 18 - input & output signals - zoneless
+
 Exploring Angular's InputSignal, outputSignal and zoneless concept with a Todo App.
 Medium article: https://mariodante.medium.com/exploring-angulars-inputsignal-outputsignal-and-zoneless-concept-with-a-todo-app-b8ff3a41f90b
 
-# Angular18Zoneless
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.2.
 
