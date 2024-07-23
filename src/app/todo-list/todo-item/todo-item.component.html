@@ -1,15 +1,17 @@
+@let todoLocal= todo();
+
 <div class="row mb-3">
   <div class="col-md-6">
     <div
       class="card"
       [ngClass]="{
-        'bg-secondary text-black': todo.done === true,
-        'bg-white text-black': todo.done === false
+        'bg-secondary text-black': todoLocal.done === true,
+        'bg-white text-black': todoLocal.done === false
       }"
     >
       <div class="card-body">
         <h5 class="card-title">
-          <span *ngIf="this.editMode === false">{{ todo.label }}</span>
+          <span *ngIf="this.editMode === false">{{ todoLocal.label }}</span>
           <input
             class="form-control"
             [(ngModel)]="titleInput"
@@ -21,7 +23,7 @@
             <a class="btn btn-secondary">Edit</a>
           </span>
         </h5>
-        <span>{{ todo.createDate | datePipe : true }}</span>
+        <span>{{ todoLocal.createDate | datePipe : true }}</span>
       </div>
       <div
         (click)="updateTask()"
